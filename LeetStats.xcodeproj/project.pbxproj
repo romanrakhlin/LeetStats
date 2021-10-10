@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		82D6E7542712E7A700B1CEBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7532712E7A700B1CEBB /* AppDelegate.swift */; };
 		82D6E7562712E7A700B1CEBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7552712E7A700B1CEBB /* SceneDelegate.swift */; };
-		82D6E7582712E7A700B1CEBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7572712E7A700B1CEBB /* ViewController.swift */; };
 		82D6E75B2712E7A700B1CEBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D6E7592712E7A700B1CEBB /* Main.storyboard */; };
 		82D6E75D2712E7A900B1CEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D6E75C2712E7A900B1CEBB /* Assets.xcassets */; };
 		82D6E7602712E7A900B1CEBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D6E75E2712E7A900B1CEBB /* LaunchScreen.storyboard */; };
 		82D6E76B2712E7A900B1CEBB /* LeetStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E76A2712E7A900B1CEBB /* LeetStatsTests.swift */; };
 		82D6E7752712E7A900B1CEBB /* LeetStatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7742712E7A900B1CEBB /* LeetStatsUITests.swift */; };
 		82D6E7772712E7A900B1CEBB /* LeetStatsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7762712E7A900B1CEBB /* LeetStatsUITestsLaunchTests.swift */; };
+		82D6E7842712E7B700B1CEBB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7832712E7B700B1CEBB /* NetworkManager.swift */; };
+		82D6E7862712E7C700B1CEBB /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7852712E7C700B1CEBB /* Stats.swift */; };
+		82D6E78A2712F37D00B1CEBB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7892712F37D00B1CEBB /* AuthViewController.swift */; };
+		82D6E78D2712F39400B1CEBB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E78C2712F39400B1CEBB /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,6 @@
 		82D6E7502712E7A700B1CEBB /* LeetStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D6E7532712E7A700B1CEBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82D6E7552712E7A700B1CEBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		82D6E7572712E7A700B1CEBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		82D6E75A2712E7A700B1CEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82D6E75C2712E7A900B1CEBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82D6E75F2712E7A900B1CEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		82D6E7702712E7A900B1CEBB /* LeetStatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeetStatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D6E7742712E7A900B1CEBB /* LeetStatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetStatsUITests.swift; sourceTree = "<group>"; };
 		82D6E7762712E7A900B1CEBB /* LeetStatsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetStatsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		82D6E7832712E7B700B1CEBB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		82D6E7852712E7C700B1CEBB /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
+		82D6E7892712F37D00B1CEBB /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		82D6E78C2712F39400B1CEBB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +107,9 @@
 			children = (
 				82D6E7532712E7A700B1CEBB /* AppDelegate.swift */,
 				82D6E7552712E7A700B1CEBB /* SceneDelegate.swift */,
-				82D6E7572712E7A700B1CEBB /* ViewController.swift */,
-				82D6E7592712E7A700B1CEBB /* Main.storyboard */,
+				82D6E7882712F33F00B1CEBB /* Model */,
+				82D6E7872712F33400B1CEBB /* View */,
+				82D6E78B2712F38000B1CEBB /* Controller */,
 				82D6E75C2712E7A900B1CEBB /* Assets.xcassets */,
 				82D6E75E2712E7A900B1CEBB /* LaunchScreen.storyboard */,
 				82D6E7612712E7A900B1CEBB /* Info.plist */,
@@ -125,6 +132,32 @@
 				82D6E7762712E7A900B1CEBB /* LeetStatsUITestsLaunchTests.swift */,
 			);
 			path = LeetStatsUITests;
+			sourceTree = "<group>";
+		};
+		82D6E7872712F33400B1CEBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				82D6E7592712E7A700B1CEBB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		82D6E7882712F33F00B1CEBB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82D6E7832712E7B700B1CEBB /* NetworkManager.swift */,
+				82D6E7852712E7C700B1CEBB /* Stats.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		82D6E78B2712F38000B1CEBB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				82D6E7892712F37D00B1CEBB /* AuthViewController.swift */,
+				82D6E78C2712F39400B1CEBB /* ProfileViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82D6E7582712E7A700B1CEBB /* ViewController.swift in Sources */,
+				82D6E78D2712F39400B1CEBB /* ProfileViewController.swift in Sources */,
+				82D6E7842712E7B700B1CEBB /* NetworkManager.swift in Sources */,
+				82D6E7862712E7C700B1CEBB /* Stats.swift in Sources */,
+				82D6E78A2712F37D00B1CEBB /* AuthViewController.swift in Sources */,
 				82D6E7542712E7A700B1CEBB /* AppDelegate.swift in Sources */,
 				82D6E7562712E7A700B1CEBB /* SceneDelegate.swift in Sources */,
 			);
@@ -447,6 +483,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,6 +512,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
