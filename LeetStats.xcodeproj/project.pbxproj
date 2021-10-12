@@ -10,9 +10,15 @@
 		824B7C3D2714728500522783 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C3C2714728500522783 /* CalendarView.swift */; };
 		824B7C41271485F600522783 /* CustomDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C40271485F600522783 /* CustomDate.swift */; };
 		824B7C432715768B00522783 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C422715768B00522783 /* SettingsViewController.swift */; };
+		824B7C452715B20900522783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824B7C442715B20900522783 /* Main.storyboard */; };
+		824B7C4D2715B80700522783 /* CGFloat+Radian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C472715B80700522783 /* CGFloat+Radian.swift */; };
+		824B7C4E2715B80700522783 /* DonutChartLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C482715B80700522783 /* DonutChartLayer.swift */; };
+		824B7C4F2715B80700522783 /* DonutChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C492715B80700522783 /* DonutChartView.swift */; };
+		824B7C502715B80700522783 /* DonutChartEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C4A2715B80700522783 /* DonutChartEntry.swift */; };
+		824B7C512715B80700522783 /* DonutChartSegmentLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C4B2715B80700522783 /* DonutChartSegmentLayer.swift */; };
+		824B7C522715B80700522783 /* CALayer + Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C4C2715B80700522783 /* CALayer + Utility.swift */; };
 		82D6E7542712E7A700B1CEBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7532712E7A700B1CEBB /* AppDelegate.swift */; };
 		82D6E7562712E7A700B1CEBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7552712E7A700B1CEBB /* SceneDelegate.swift */; };
-		82D6E75B2712E7A700B1CEBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D6E7592712E7A700B1CEBB /* Main.storyboard */; };
 		82D6E75D2712E7A900B1CEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D6E75C2712E7A900B1CEBB /* Assets.xcassets */; };
 		82D6E7602712E7A900B1CEBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D6E75E2712E7A900B1CEBB /* LaunchScreen.storyboard */; };
 		82D6E76B2712E7A900B1CEBB /* LeetStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E76A2712E7A900B1CEBB /* LeetStatsTests.swift */; };
@@ -45,10 +51,16 @@
 		824B7C3C2714728500522783 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		824B7C40271485F600522783 /* CustomDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDate.swift; sourceTree = "<group>"; };
 		824B7C422715768B00522783 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		824B7C442715B20900522783 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		824B7C472715B80700522783 /* CGFloat+Radian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Radian.swift"; sourceTree = "<group>"; };
+		824B7C482715B80700522783 /* DonutChartLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonutChartLayer.swift; sourceTree = "<group>"; };
+		824B7C492715B80700522783 /* DonutChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonutChartView.swift; sourceTree = "<group>"; };
+		824B7C4A2715B80700522783 /* DonutChartEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonutChartEntry.swift; sourceTree = "<group>"; };
+		824B7C4B2715B80700522783 /* DonutChartSegmentLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonutChartSegmentLayer.swift; sourceTree = "<group>"; };
+		824B7C4C2715B80700522783 /* CALayer + Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer + Utility.swift"; sourceTree = "<group>"; };
 		82D6E7502712E7A700B1CEBB /* LeetStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D6E7532712E7A700B1CEBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82D6E7552712E7A700B1CEBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		82D6E75A2712E7A700B1CEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82D6E75C2712E7A900B1CEBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82D6E75F2712E7A900B1CEBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82D6E7612712E7A900B1CEBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +100,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		824B7C462715B7E600522783 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				824B7C4C2715B80700522783 /* CALayer + Utility.swift */,
+				824B7C472715B80700522783 /* CGFloat+Radian.swift */,
+				824B7C4A2715B80700522783 /* DonutChartEntry.swift */,
+				824B7C482715B80700522783 /* DonutChartLayer.swift */,
+				824B7C4B2715B80700522783 /* DonutChartSegmentLayer.swift */,
+				824B7C492715B80700522783 /* DonutChartView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		82D6E7472712E7A700B1CEBB = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +142,7 @@
 				82D6E7882712F33F00B1CEBB /* Model */,
 				82D6E7872712F33400B1CEBB /* View */,
 				82D6E78B2712F38000B1CEBB /* Controller */,
+				824B7C462715B7E600522783 /* Extension */,
 				82D6E75C2712E7A900B1CEBB /* Assets.xcassets */,
 				82D6E75E2712E7A900B1CEBB /* LaunchScreen.storyboard */,
 				82D6E7612712E7A900B1CEBB /* Info.plist */,
@@ -144,7 +170,7 @@
 		82D6E7872712F33400B1CEBB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				82D6E7592712E7A700B1CEBB /* Main.storyboard */,
+				824B7C442715B20900522783 /* Main.storyboard */,
 				824B7C3C2714728500522783 /* CalendarView.swift */,
 			);
 			path = View;
@@ -273,9 +299,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824B7C452715B20900522783 /* Main.storyboard in Resources */,
 				82D6E7602712E7A900B1CEBB /* LaunchScreen.storyboard in Resources */,
 				82D6E75D2712E7A900B1CEBB /* Assets.xcassets in Resources */,
-				82D6E75B2712E7A700B1CEBB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,11 +328,17 @@
 			files = (
 				824B7C41271485F600522783 /* CustomDate.swift in Sources */,
 				82D6E78D2712F39400B1CEBB /* ProfileViewController.swift in Sources */,
+				824B7C4F2715B80700522783 /* DonutChartView.swift in Sources */,
+				824B7C522715B80700522783 /* CALayer + Utility.swift in Sources */,
+				824B7C512715B80700522783 /* DonutChartSegmentLayer.swift in Sources */,
 				824B7C3D2714728500522783 /* CalendarView.swift in Sources */,
 				82D6E7842712E7B700B1CEBB /* NetworkManager.swift in Sources */,
 				82D6E7862712E7C700B1CEBB /* Stats.swift in Sources */,
 				82D6E78A2712F37D00B1CEBB /* AuthViewController.swift in Sources */,
 				82D6E7542712E7A700B1CEBB /* AppDelegate.swift in Sources */,
+				824B7C4D2715B80700522783 /* CGFloat+Radian.swift in Sources */,
+				824B7C502715B80700522783 /* DonutChartEntry.swift in Sources */,
+				824B7C4E2715B80700522783 /* DonutChartLayer.swift in Sources */,
 				82D6E7562712E7A700B1CEBB /* SceneDelegate.swift in Sources */,
 				824B7C432715768B00522783 /* SettingsViewController.swift in Sources */,
 			);
@@ -345,14 +377,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		82D6E7592712E7A700B1CEBB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				82D6E75A2712E7A700B1CEBB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		82D6E75E2712E7A900B1CEBB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -495,7 +519,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -524,7 +548,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

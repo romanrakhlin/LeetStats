@@ -21,6 +21,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var easyView: UIView!
     @IBOutlet weak var mediumView: UIView!
     @IBOutlet weak var hardView: UIView!
+    @IBOutlet weak var donutChartView: DonutChartView!
     
     // labels
     @IBOutlet weak var usernameLabel: UILabel!
@@ -28,23 +29,17 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var easyLabel: UILabel!
     @IBOutlet weak var mediumLabel: UILabel!
     @IBOutlet weak var hardLabel: UILabel!
+    @IBOutlet weak var rankingLabel: UILabel!
+    @IBOutlet weak var reputationLabel: UILabel!
+    @IBOutlet weak var contributionPointsLabel: UILabel!
+    @IBOutlet weak var acceptanceLabel: UILabel!
+    
+    // images
+    @IBOutlet weak var rankingImage: UIImageView!
+    @IBOutlet weak var reputationImage: UIImageView!
+    @IBOutlet weak var contributionsPointsImage: UIImageView!
     
     var activityIndicator = UIActivityIndicatorView(style: .large) // for indicator
-    
-    override func loadView() {
-        super .loadView()
-        
-//        submissions = setAllSubmission()
-//        let calendarMainView = CalendarView(frame: CGRect(x: 0, y: 0, width: calendarView.frame.width, height: calendarView.frame.height), data: submissions)
-//        calendarView.addSubview(calendarMainView)
-//        calendarMainView.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            calendarMainView.topAnchor.constraint(equalTo: calendarView.topAnchor),
-//            calendarMainView.bottomAnchor.constraint(equalTo: calendarView.bottomAnchor),
-//            calendarMainView.leadingAnchor.constraint(equalTo: calendarView.leadingAnchor),
-//            calendarMainView.trailingAnchor.constraint(equalTo: calendarView.trailingAnchor),
-//        ])
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,11 +96,23 @@ class ProfileViewController: UIViewController {
                         ])
                         
                         // set values to labels
-                        self.totalLabel.text = "Total " + String(self.stats.totalSolved)
-                        self.easyLabel.text = "Easy " + String(self.stats.easySolved)
-                        self.mediumLabel.text = "Medium " + String(self.stats.mediumSolved)
-                        self.hardLabel.text = "Hard " + String(self.stats.hardSolved)
                         self.usernameLabel.text = self.stats.username!
+                        self.totalLabel.text = String(self.stats.totalSolved) + " / " + String(self.stats.totalQuestions)
+                        self.easyLabel.text = String(self.stats.easySolved) + " / " + String(self.stats.totalEasy)
+                        self.mediumLabel.text = String(self.stats.mediumSolved) + " / " + String(self.stats.totalMedium)
+                        self.hardLabel.text = String(self.stats.hardSolved) + " / " + String(self.stats.totalHard)
+                        self.rankingLabel.text = "Ranking: \(String(self.stats.ranking))"
+                        self.reputationLabel.text = "Reputation: \(String(self.stats.reputation))"
+                        self.contributionPointsLabel.text = "Contribution Points: \(String(self.stats.contributionPoints))"
+                        
+                        // load donut chart view
+                        let values : [CGFloat] = [self.stats.acceptanceRate / 100, 1 - self.stats.acceptanceRate / 100]
+                        print(values)
+                        let colors: [UIColor] = [.systemGreen, .white]
+                        let entries = values.enumerated().map{ (index, value) in
+                            return DonutChartEntry(value: value, color: colors[index])
+                        }
+                        self.donutChartView.configureView(entries: entries, centerLabelText: "\(self.stats.acceptanceRate)% / 100%", animate: true)
                     }
                 })
             }
@@ -125,7 +132,7 @@ class ProfileViewController: UIViewController {
         mediumView.layer.cornerRadius = mediumView.frame.size.height / 5
         hardView.layer.cornerRadius = hardView.frame.size.height / 5
         
-        // shadows
+        // shadows views
         totalView.layer.shadowColor = UIColor.black.cgColor
         totalView.layer.shadowOpacity = 0.4
         totalView.layer.shadowOffset = .zero
@@ -145,9 +152,55 @@ class ProfileViewController: UIViewController {
         hardView.layer.shadowOpacity = 0.4
         hardView.layer.shadowOffset = .zero
         hardView.layer.shadowRadius = 8
+        
+        donutChartView.layer.shadowColor = UIColor.black.cgColor
+        donutChartView.layer.shadowOpacity = 0.2
+        donutChartView.layer.shadowOffset = .zero
+        donutChartView.layer.shadowRadius = 2
+        
+        //shadows labels and images
+        usernameLabel.layer.shadowColor = UIColor.black.cgColor
+        usernameLabel.layer.shadowOpacity = 0.4
+        usernameLabel.layer.shadowOffset = .zero
+        usernameLabel.layer.shadowRadius = 4
+        
+        acceptanceLabel.layer.shadowColor = UIColor.black.cgColor
+        acceptanceLabel.layer.shadowOpacity = 0.4
+        acceptanceLabel.layer.shadowOffset = .zero
+        acceptanceLabel.layer.shadowRadius = 8
+        
+        rankingImage.layer.shadowColor = UIColor.black.cgColor
+        rankingImage.layer.shadowOpacity = 0.4
+        rankingImage.layer.shadowOffset = .zero
+        rankingImage.layer.shadowRadius = 8
+        
+        rankingLabel.layer.shadowColor = UIColor.black.cgColor
+        rankingLabel.layer.shadowOpacity = 0.4
+        rankingLabel.layer.shadowOffset = .zero
+        rankingLabel.layer.shadowRadius = 8
+        
+        reputationImage.layer.shadowColor = UIColor.black.cgColor
+        reputationImage.layer.shadowOpacity = 0.4
+        reputationImage.layer.shadowOffset = .zero
+        reputationImage.layer.shadowRadius = 8
+        
+        contributionsPointsImage.layer.shadowColor = UIColor.black.cgColor
+        contributionsPointsImage.layer.shadowOpacity = 0.4
+        contributionsPointsImage.layer.shadowOffset = .zero
+        contributionsPointsImage.layer.shadowRadius = 8
+        
+        contributionPointsLabel.layer.shadowColor = UIColor.black.cgColor
+        contributionPointsLabel.layer.shadowOpacity = 0.4
+        contributionPointsLabel.layer.shadowOffset = .zero
+        contributionPointsLabel.layer.shadowRadius = 8
+        
+        reputationLabel.layer.shadowColor = UIColor.black.cgColor
+        reputationLabel.layer.shadowOpacity = 0.4
+        reputationLabel.layer.shadowOffset = .zero
+        reputationLabel.layer.shadowRadius = 8
     }
     
-    @IBAction func logOutButtonPressed(_ sender: UIButton) {
+    @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
         defaults.removeObject(forKey: "SavedStats")
         defaults.synchronize()
         DispatchQueue.main.async {
@@ -155,7 +208,7 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    @IBAction func settingsButtonPressed(_ sender: UIButton) {
+    @IBAction func settingsButtonPressed(_ sender: UIBarButtonItem) {
     }
     
     @IBAction func shareButtonPressed(_ sender: UIButton) {
