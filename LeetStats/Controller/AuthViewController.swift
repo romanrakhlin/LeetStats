@@ -17,36 +17,6 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // check if already in userdefaults
-        // then set stats var from user defaults and go the profile controller
-        if let savedStats = defaults.object(forKey: "SavedStats") as? Data {
-            let decoder = JSONDecoder()
-            if let loadedStats = try? decoder.decode(Stats.self, from: savedStats) {
-                // check if username exists
-                guard let username = loadedStats.username else {
-                    return
-                }
-                
-                // making new request to get new data
-                networkManager.performRequest(with: username, completed: { newStats in
-                    self.stats = newStats // save all stats
-                    self.stats!.username = username // save username independently
-
-                    // save stats to UserDefaults
-                    let encoder = JSONEncoder()
-                    if let encoded = try? encoder.encode(self.stats) {
-                        self.defaults.set(encoded, forKey: "SavedStats")
-                        self.defaults.synchronize()
-                    }
-
-                    // go to the ProfileViewCOntroller
-                    DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "profileSegue", sender: self)
-                    }
-                })
-            }
-        }
     }
     
     @IBAction func authButtonPressed(_ sender: UIButton) {
