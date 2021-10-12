@@ -19,7 +19,7 @@ struct Stats: Codable {
     var easySolved: Int
     var totalSolved: Int
     var hardSolved: Int
-//    var submissionCalendar: [SubmissionCalendar]?
+    var submissionCalendar: [String: Int]
     var mediumSolved: Int
     var contributionPoints: Int
     var totalEasy: Int

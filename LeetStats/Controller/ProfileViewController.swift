@@ -11,8 +11,11 @@ class ProfileViewController: UIViewController {
     
     var stats: Stats!
     let defaults = UserDefaults.standard // for UserDefaults
+    var submissions: [Int]!
+    var calendarSubmissions: [String: Int]!
     
     // views
+    @IBOutlet weak var calendarView: UIView!
     @IBOutlet weak var totalView: UIView!
     @IBOutlet weak var easyView: UIView!
     @IBOutlet weak var mediumView: UIView!
@@ -25,16 +28,30 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var mediumLabel: UILabel!
     @IBOutlet weak var hardLabel: UILabel!
     
+    override func loadView() {
+        super .loadView()
+        
+        submissions = setAllSubmission()
+        let calendarMainView = CalendarView(frame: CGRect(x: 0, y: 0, width: calendarView.frame.width, height: calendarView.frame.height), data: submissions)
+        calendarView.addSubview(calendarMainView)
+        calendarMainView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            calendarMainView.topAnchor.constraint(equalTo: calendarView.topAnchor),
+            calendarMainView.bottomAnchor.constraint(equalTo: calendarView.bottomAnchor),
+            calendarMainView.leadingAnchor.constraint(equalTo: calendarView.leadingAnchor),
+            calendarMainView.trailingAnchor.constraint(equalTo: calendarView.trailingAnchor),
+        ])
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // set values to labels
         usernameLabel.text = stats.username!
-        totalLabel.text = String(stats.totalSolved)
-        easyLabel.text = String(stats.easySolved)
-        mediumLabel.text = String(stats.mediumSolved)
-        hardLabel.text = String(stats.hardSolved)
-        
+        totalLabel.text = "Total " + String(stats.totalSolved)
+        easyLabel.text = "Easy " + String(stats.easySolved)
+        mediumLabel.text = "Medium " + String(stats.mediumSolved)
+        hardLabel.text = "Hard " + String(stats.hardSolved)
     }
      
     override func viewWillAppear(_ animated: Bool) {
@@ -78,5 +95,33 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func shareButtonPressed(_ sender: UIButton) {
+    }
+    
+    /*
+     1. Find seconds passed from 1970 year and store it in todayInSecondsFrom1970
+     2.
+    */
+    private func setAllSubmission() -> [Int] {
+        // equal to 12*7=84 elemts by default
+        var submissions = [Int](repeating: 0, count: 84)
+        
+        // creating curretn date
+        let currentDate = Date()
+        
+        // millisends from 1st jan 1970 year
+        var calendar = Calendar.current
+        calendar.timeZone = TimeZone(secondsFromGMT:0)!
+        let todayInSecondsFrom1970 = calendar.startOfDay(for: currentDate).timeIntervalSince1970
+        
+        let day = 24 * 3600
+        
+        for (key, value) in calendarSubmissions {
+            let index = (submissions.count - (Int(todayInSecondsFrom1970) - Int(key)!) / day) - 1
+            if index >= 0 {
+                submissions[index] = value
+            }
+        }
+        
+        return submissions
     }
 }

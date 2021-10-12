@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		824B7C3D2714728500522783 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C3C2714728500522783 /* CalendarView.swift */; };
+		824B7C41271485F600522783 /* CustomDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C40271485F600522783 /* CustomDate.swift */; };
 		82D6E7542712E7A700B1CEBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7532712E7A700B1CEBB /* AppDelegate.swift */; };
 		82D6E7562712E7A700B1CEBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7552712E7A700B1CEBB /* SceneDelegate.swift */; };
 		82D6E75B2712E7A700B1CEBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82D6E7592712E7A700B1CEBB /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		824B7C3C2714728500522783 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		824B7C40271485F600522783 /* CustomDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDate.swift; sourceTree = "<group>"; };
 		82D6E7502712E7A700B1CEBB /* LeetStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D6E7532712E7A700B1CEBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82D6E7552712E7A700B1CEBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 		82D6E7522712E7A700B1CEBB /* LeetStats */ = {
 			isa = PBXGroup;
 			children = (
+				824B7C40271485F600522783 /* CustomDate.swift */,
 				82D6E7532712E7A700B1CEBB /* AppDelegate.swift */,
 				82D6E7552712E7A700B1CEBB /* SceneDelegate.swift */,
 				82D6E7882712F33F00B1CEBB /* Model */,
@@ -138,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				82D6E7592712E7A700B1CEBB /* Main.storyboard */,
+				824B7C3C2714728500522783 /* CalendarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,7 +297,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824B7C41271485F600522783 /* CustomDate.swift in Sources */,
 				82D6E78D2712F39400B1CEBB /* ProfileViewController.swift in Sources */,
+				824B7C3D2714728500522783 /* CalendarView.swift in Sources */,
 				82D6E7842712E7B700B1CEBB /* NetworkManager.swift in Sources */,
 				82D6E7862712E7C700B1CEBB /* Stats.swift in Sources */,
 				82D6E78A2712F37D00B1CEBB /* AuthViewController.swift in Sources */,
