@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		824B7C3D2714728500522783 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C3C2714728500522783 /* CalendarView.swift */; };
 		824B7C41271485F600522783 /* CustomDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C40271485F600522783 /* CustomDate.swift */; };
 		824B7C432715768B00522783 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C422715768B00522783 /* SettingsViewController.swift */; };
 		824B7C452715B20900522783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824B7C442715B20900522783 /* Main.storyboard */; };
@@ -17,6 +16,16 @@
 		824B7C502715B80700522783 /* DonutChartEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C4A2715B80700522783 /* DonutChartEntry.swift */; };
 		824B7C512715B80700522783 /* DonutChartSegmentLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C4B2715B80700522783 /* DonutChartSegmentLayer.swift */; };
 		824B7C522715B80700522783 /* CALayer + Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C4C2715B80700522783 /* CALayer + Utility.swift */; };
+		824B7C5A271609D000522783 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824B7C59271609D000522783 /* WidgetKit.framework */; };
+		824B7C5C271609D000522783 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824B7C5B271609D000522783 /* SwiftUI.framework */; };
+		824B7C5F271609D000522783 /* CalendarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C5E271609D000522783 /* CalendarWidget.swift */; };
+		824B7C62271609D100522783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 824B7C61271609D100522783 /* Assets.xcassets */; };
+		824B7C64271609D100522783 /* CalendarWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C60271609D000522783 /* CalendarWidget.intentdefinition */; };
+		824B7C65271609D100522783 /* CalendarWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C60271609D000522783 /* CalendarWidget.intentdefinition */; };
+		824B7C68271609D100522783 /* CalendarWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 824B7C57271609D000522783 /* CalendarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		824B7C6E27160A2900522783 /* CalendarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C6D27160A2900522783 /* CalendarData.swift */; };
+		824B7C70271610BD00522783 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C6F271610BD00522783 /* CalendarView.swift */; };
+		824B7C71271610BD00522783 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C6F271610BD00522783 /* CalendarView.swift */; };
 		82D6E7542712E7A700B1CEBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7532712E7A700B1CEBB /* AppDelegate.swift */; };
 		82D6E7562712E7A700B1CEBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7552712E7A700B1CEBB /* SceneDelegate.swift */; };
 		82D6E75D2712E7A900B1CEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D6E75C2712E7A900B1CEBB /* Assets.xcassets */; };
@@ -31,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		824B7C66271609D100522783 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82D6E7482712E7A700B1CEBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 824B7C56271609D000522783;
+			remoteInfo = CalendarWidgetExtension;
+		};
 		82D6E7672712E7A900B1CEBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 82D6E7482712E7A700B1CEBB /* Project object */;
@@ -47,8 +63,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		824B7C6C271609D100522783 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				824B7C68271609D100522783 /* CalendarWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		824B7C3C2714728500522783 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		824B7C40271485F600522783 /* CustomDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDate.swift; sourceTree = "<group>"; };
 		824B7C422715768B00522783 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		824B7C442715B20900522783 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +87,15 @@
 		824B7C4A2715B80700522783 /* DonutChartEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonutChartEntry.swift; sourceTree = "<group>"; };
 		824B7C4B2715B80700522783 /* DonutChartSegmentLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonutChartSegmentLayer.swift; sourceTree = "<group>"; };
 		824B7C4C2715B80700522783 /* CALayer + Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer + Utility.swift"; sourceTree = "<group>"; };
+		824B7C57271609D000522783 /* CalendarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CalendarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		824B7C59271609D000522783 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		824B7C5B271609D000522783 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		824B7C5E271609D000522783 /* CalendarWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidget.swift; sourceTree = "<group>"; };
+		824B7C60271609D000522783 /* CalendarWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = CalendarWidget.intentdefinition; sourceTree = "<group>"; };
+		824B7C61271609D100522783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		824B7C63271609D100522783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		824B7C6D27160A2900522783 /* CalendarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarData.swift; sourceTree = "<group>"; };
+		824B7C6F271610BD00522783 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		82D6E7502712E7A700B1CEBB /* LeetStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82D6E7532712E7A700B1CEBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82D6E7552712E7A700B1CEBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +114,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		824B7C54271609D000522783 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				824B7C5C271609D000522783 /* SwiftUI.framework in Frameworks */,
+				824B7C5A271609D000522783 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82D6E74D2712E7A700B1CEBB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -100,7 +147,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		824B7C462715B7E600522783 /* Extension */ = {
+		824B7C462715B7E600522783 /* Donut Chart */ = {
 			isa = PBXGroup;
 			children = (
 				824B7C4C2715B80700522783 /* CALayer + Utility.swift */,
@@ -110,7 +157,27 @@
 				824B7C4B2715B80700522783 /* DonutChartSegmentLayer.swift */,
 				824B7C492715B80700522783 /* DonutChartView.swift */,
 			);
-			path = Extension;
+			path = "Donut Chart";
+			sourceTree = "<group>";
+		};
+		824B7C58271609D000522783 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				824B7C59271609D000522783 /* WidgetKit.framework */,
+				824B7C5B271609D000522783 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		824B7C5D271609D000522783 /* CalendarWidget */ = {
+			isa = PBXGroup;
+			children = (
+				824B7C5E271609D000522783 /* CalendarWidget.swift */,
+				824B7C60271609D000522783 /* CalendarWidget.intentdefinition */,
+				824B7C61271609D100522783 /* Assets.xcassets */,
+				824B7C63271609D100522783 /* Info.plist */,
+			);
+			path = CalendarWidget;
 			sourceTree = "<group>";
 		};
 		82D6E7472712E7A700B1CEBB = {
@@ -119,6 +186,8 @@
 				82D6E7522712E7A700B1CEBB /* LeetStats */,
 				82D6E7692712E7A900B1CEBB /* LeetStatsTests */,
 				82D6E7732712E7A900B1CEBB /* LeetStatsUITests */,
+				824B7C5D271609D000522783 /* CalendarWidget */,
+				824B7C58271609D000522783 /* Frameworks */,
 				82D6E7512712E7A700B1CEBB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,6 +198,7 @@
 				82D6E7502712E7A700B1CEBB /* LeetStats.app */,
 				82D6E7662712E7A900B1CEBB /* LeetStatsTests.xctest */,
 				82D6E7702712E7A900B1CEBB /* LeetStatsUITests.xctest */,
+				824B7C57271609D000522783 /* CalendarWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,7 +212,7 @@
 				82D6E7882712F33F00B1CEBB /* Model */,
 				82D6E7872712F33400B1CEBB /* View */,
 				82D6E78B2712F38000B1CEBB /* Controller */,
-				824B7C462715B7E600522783 /* Extension */,
+				824B7C462715B7E600522783 /* Donut Chart */,
 				82D6E75C2712E7A900B1CEBB /* Assets.xcassets */,
 				82D6E75E2712E7A900B1CEBB /* LaunchScreen.storyboard */,
 				82D6E7612712E7A900B1CEBB /* Info.plist */,
@@ -171,7 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				824B7C442715B20900522783 /* Main.storyboard */,
-				824B7C3C2714728500522783 /* CalendarView.swift */,
+				824B7C6F271610BD00522783 /* CalendarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -181,6 +251,7 @@
 			children = (
 				82D6E7832712E7B700B1CEBB /* NetworkManager.swift */,
 				82D6E7852712E7C700B1CEBB /* Stats.swift */,
+				824B7C6D27160A2900522783 /* CalendarData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,6 +269,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		824B7C56271609D000522783 /* CalendarWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 824B7C69271609D100522783 /* Build configuration list for PBXNativeTarget "CalendarWidgetExtension" */;
+			buildPhases = (
+				824B7C53271609D000522783 /* Sources */,
+				824B7C54271609D000522783 /* Frameworks */,
+				824B7C55271609D000522783 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CalendarWidgetExtension;
+			productName = CalendarWidgetExtension;
+			productReference = 824B7C57271609D000522783 /* CalendarWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		82D6E74F2712E7A700B1CEBB /* LeetStats */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82D6E77A2712E7A900B1CEBB /* Build configuration list for PBXNativeTarget "LeetStats" */;
@@ -205,10 +293,12 @@
 				82D6E74C2712E7A700B1CEBB /* Sources */,
 				82D6E74D2712E7A700B1CEBB /* Frameworks */,
 				82D6E74E2712E7A700B1CEBB /* Resources */,
+				824B7C6C271609D100522783 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				824B7C67271609D100522783 /* PBXTargetDependency */,
 			);
 			name = LeetStats;
 			productName = LeetStats;
@@ -261,6 +351,9 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					824B7C56271609D000522783 = {
+						CreatedOnToolsVersion = 13.0;
+					};
 					82D6E74F2712E7A700B1CEBB = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -290,11 +383,20 @@
 				82D6E74F2712E7A700B1CEBB /* LeetStats */,
 				82D6E7652712E7A900B1CEBB /* LeetStatsTests */,
 				82D6E76F2712E7A900B1CEBB /* LeetStatsUITests */,
+				824B7C56271609D000522783 /* CalendarWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		824B7C55271609D000522783 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				824B7C62271609D100522783 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82D6E74E2712E7A700B1CEBB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,6 +424,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		824B7C53271609D000522783 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				824B7C64271609D100522783 /* CalendarWidget.intentdefinition in Sources */,
+				824B7C5F271609D000522783 /* CalendarWidget.swift in Sources */,
+				824B7C71271610BD00522783 /* CalendarView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82D6E74C2712E7A700B1CEBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -329,9 +441,11 @@
 				824B7C41271485F600522783 /* CustomDate.swift in Sources */,
 				82D6E78D2712F39400B1CEBB /* ProfileViewController.swift in Sources */,
 				824B7C4F2715B80700522783 /* DonutChartView.swift in Sources */,
+				824B7C70271610BD00522783 /* CalendarView.swift in Sources */,
 				824B7C522715B80700522783 /* CALayer + Utility.swift in Sources */,
 				824B7C512715B80700522783 /* DonutChartSegmentLayer.swift in Sources */,
-				824B7C3D2714728500522783 /* CalendarView.swift in Sources */,
+				824B7C6E27160A2900522783 /* CalendarData.swift in Sources */,
+				824B7C65271609D100522783 /* CalendarWidget.intentdefinition in Sources */,
 				82D6E7842712E7B700B1CEBB /* NetworkManager.swift in Sources */,
 				82D6E7862712E7C700B1CEBB /* Stats.swift in Sources */,
 				82D6E78A2712F37D00B1CEBB /* AuthViewController.swift in Sources */,
@@ -364,6 +478,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		824B7C67271609D100522783 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 824B7C56271609D000522783 /* CalendarWidgetExtension */;
+			targetProxy = 824B7C66271609D100522783 /* PBXContainerItemProxy */;
+		};
 		82D6E7682712E7A900B1CEBB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 82D6E74F2712E7A700B1CEBB /* LeetStats */;
@@ -388,6 +507,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		824B7C6A271609D100522783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3868R87QJX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CalendarWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CalendarWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.romanrakhlin.LeetStats.CalendarWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		824B7C6B271609D100522783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3868R87QJX;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CalendarWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CalendarWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.romanrakhlin.LeetStats.CalendarWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		82D6E7782712E7A900B1CEBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -507,6 +680,7 @@
 		82D6E77B2712E7A900B1CEBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -517,6 +691,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -529,13 +704,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		82D6E77C2712E7A900B1CEBB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +722,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -558,7 +735,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -661,6 +838,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		824B7C69271609D100522783 /* Build configuration list for PBXNativeTarget "CalendarWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				824B7C6A271609D100522783 /* Debug */,
+				824B7C6B271609D100522783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		82D6E74B2712E7A700B1CEBB /* Build configuration list for PBXProject "LeetStats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

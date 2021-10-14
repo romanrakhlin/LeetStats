@@ -8,6 +8,7 @@
 import WidgetKit
 import SwiftUI
 import Intents
+import UIKit
 
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
@@ -42,9 +43,24 @@ struct SimpleEntry: TimelineEntry {
 
 struct CalendarWidgetEntryView : View {
     var entry: Provider.Entry
+    @State var text = NSMutableAttributedString(string: "")
 
     var body: some View {
-        Text(entry.date, style: .time)
+        CalendarSubView(submissions: [0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 26, 4, 3, 0, 0, 0, 0, 12, 13, 1, 7, 8, 8, 26, 15, 20, 0, 0, 0, 0, 0, 0, 0, 0, 37, 22, 14, 21, 7, 0, 12, 0, 0, 0, 0, 0, 0, 0, 7, 40, 9, 20, 4, 5, 3, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1])
+    }
+}
+
+struct CalendarSubView: UIViewRepresentable {
+    
+    var submissions: [Int]!
+    
+    func makeUIView(context: UIViewRepresentableContext<CalendarSubView>) -> CalendarView {
+        let calendarView = CalendarView(frame: CGRect(x: 0, y: 0, width: 400, height: 400), data: submissions)
+        return calendarView
+    }
+    
+    func updateUIView(_ uiView: CalendarView,
+        context: UIViewRepresentableContext<CalendarSubView>) {
     }
 }
 

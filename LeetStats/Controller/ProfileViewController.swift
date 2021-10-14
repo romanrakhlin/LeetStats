@@ -44,6 +44,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        switchAppearenceOfComponents(to: true)
+        
         // setting up spinner
         activityIndicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
         activityIndicator.center = self.view.center
@@ -114,6 +116,11 @@ class ProfileViewController: UIViewController {
                         }
                         self.donutChartView.configureView(entries: entries, centerLabelText: "\(self.stats.acceptanceRate)% / 100%", animate: true)
                     }
+                    
+                    // show all elements
+                    DispatchQueue.main.async {
+                        self.switchAppearenceOfComponents(to: false)
+                    }
                 })
             }
         } else {
@@ -121,6 +128,33 @@ class ProfileViewController: UIViewController {
                 self.performSegue(withIdentifier: "authSegue", sender: self)
             }
         }
+    }
+    
+    // when we load data we have to hide all UI compoinents and then show them again
+    private func switchAppearenceOfComponents(to value: Bool) {
+        // views
+        calendarView.isHidden = value
+        totalView.isHidden = value
+        easyView.isHidden = value
+        mediumView.isHidden = value
+        hardView.isHidden = value
+        donutChartView.isHidden = value
+        
+        // labels
+        usernameLabel.isHidden = value
+        totalLabel.isHidden = value
+        easyLabel.isHidden = value
+        mediumLabel.isHidden = value
+        hardLabel.isHidden = value
+        rankingLabel.isHidden = value
+        reputationLabel.isHidden = value
+        contributionPointsLabel.isHidden = value
+        acceptanceLabel.isHidden = value
+        
+        // images
+        rankingImage.isHidden = value
+        reputationImage.isHidden = value
+        contributionsPointsImage.isHidden = value
     }
      
     override func viewWillAppear(_ animated: Bool) {
@@ -158,46 +192,10 @@ class ProfileViewController: UIViewController {
         donutChartView.layer.shadowOffset = .zero
         donutChartView.layer.shadowRadius = 2
         
-        //shadows labels and images
-        usernameLabel.layer.shadowColor = UIColor.black.cgColor
-        usernameLabel.layer.shadowOpacity = 0.4
-        usernameLabel.layer.shadowOffset = .zero
-        usernameLabel.layer.shadowRadius = 4
-        
-        acceptanceLabel.layer.shadowColor = UIColor.black.cgColor
-        acceptanceLabel.layer.shadowOpacity = 0.4
-        acceptanceLabel.layer.shadowOffset = .zero
-        acceptanceLabel.layer.shadowRadius = 8
-        
-        rankingImage.layer.shadowColor = UIColor.black.cgColor
-        rankingImage.layer.shadowOpacity = 0.4
-        rankingImage.layer.shadowOffset = .zero
-        rankingImage.layer.shadowRadius = 8
-        
-        rankingLabel.layer.shadowColor = UIColor.black.cgColor
-        rankingLabel.layer.shadowOpacity = 0.4
-        rankingLabel.layer.shadowOffset = .zero
-        rankingLabel.layer.shadowRadius = 8
-        
-        reputationImage.layer.shadowColor = UIColor.black.cgColor
-        reputationImage.layer.shadowOpacity = 0.4
-        reputationImage.layer.shadowOffset = .zero
-        reputationImage.layer.shadowRadius = 8
-        
-        contributionsPointsImage.layer.shadowColor = UIColor.black.cgColor
-        contributionsPointsImage.layer.shadowOpacity = 0.4
-        contributionsPointsImage.layer.shadowOffset = .zero
-        contributionsPointsImage.layer.shadowRadius = 8
-        
-        contributionPointsLabel.layer.shadowColor = UIColor.black.cgColor
-        contributionPointsLabel.layer.shadowOpacity = 0.4
-        contributionPointsLabel.layer.shadowOffset = .zero
-        contributionPointsLabel.layer.shadowRadius = 8
-        
-        reputationLabel.layer.shadowColor = UIColor.black.cgColor
-        reputationLabel.layer.shadowOpacity = 0.4
-        reputationLabel.layer.shadowOffset = .zero
-        reputationLabel.layer.shadowRadius = 8
+        calendarView.layer.shadowColor = UIColor.black.cgColor
+        calendarView.layer.shadowOpacity = 0.2
+        calendarView.layer.shadowOffset = .zero
+        calendarView.layer.shadowRadius = 2
     }
     
     @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
@@ -242,3 +240,14 @@ class ProfileViewController: UIViewController {
         return submissions
     }
 }
+//
+//extension ProfileViewController: UIViewControllerPreviewingDelegate {
+//    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIView? {
+//        previewingContext.sourceRect = calendarView.frame
+//        return calendarView
+//    }
+//
+//    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+//        <#code#>
+//    }
+//}
