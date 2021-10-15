@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		822351782719B57B00A078B3 /* MaterialActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822351772719B57B00A078B3 /* MaterialActivityIndicator.swift */; };
+		8223517A2719B59E00A078B3 /* MaterialActivityIndicatorAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822351792719B59E00A078B3 /* MaterialActivityIndicatorAnimator.swift */; };
+		8223517D2719B5D000A078B3 /* CAPropertyAnimation+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223517C2719B5D000A078B3 /* CAPropertyAnimation+Key.swift */; };
+		8223517F2719B5E000A078B3 /* CGRect+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223517E2719B5E000A078B3 /* CGRect+Center.swift */; };
+		822351812719B5F500A078B3 /* CGSize+Min.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822351802719B5F500A078B3 /* CGSize+Min.swift */; };
+		822351832719B60C00A078B3 /* UIBezierPath+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822351822719B60C00A078B3 /* UIBezierPath+Circle.swift */; };
+		822351942719D81200A078B3 /* LeetWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822351932719D81200A078B3 /* LeetWidgets.swift */; };
+		822351972719D81400A078B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 822351962719D81400A078B3 /* Assets.xcassets */; };
+		822351992719D81400A078B3 /* LeetWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 822351952719D81200A078B3 /* LeetWidgets.intentdefinition */; };
+		8223519A2719D81400A078B3 /* LeetWidgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 822351952719D81200A078B3 /* LeetWidgets.intentdefinition */; };
+		8223519D2719D81400A078B3 /* LeetWidgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8223518F2719D81200A078B3 /* LeetWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		822351A12719D8ED00A078B3 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7852712E7C700B1CEBB /* Stats.swift */; };
+		822351A3271A0BF500A078B3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824B7C5B271609D000522783 /* SwiftUI.framework */; };
+		822351A6271A0BF700A078B3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824B7C59271609D000522783 /* WidgetKit.framework */; };
 		824B7C41271485F600522783 /* CustomDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C40271485F600522783 /* CustomDate.swift */; };
 		824B7C432715768B00522783 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C422715768B00522783 /* SettingsViewController.swift */; };
 		824B7C452715B20900522783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824B7C442715B20900522783 /* Main.storyboard */; };
@@ -16,16 +30,8 @@
 		824B7C502715B80700522783 /* DonutChartEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C4A2715B80700522783 /* DonutChartEntry.swift */; };
 		824B7C512715B80700522783 /* DonutChartSegmentLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C4B2715B80700522783 /* DonutChartSegmentLayer.swift */; };
 		824B7C522715B80700522783 /* CALayer + Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C4C2715B80700522783 /* CALayer + Utility.swift */; };
-		824B7C5A271609D000522783 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824B7C59271609D000522783 /* WidgetKit.framework */; };
-		824B7C5C271609D000522783 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824B7C5B271609D000522783 /* SwiftUI.framework */; };
-		824B7C5F271609D000522783 /* CalendarWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C5E271609D000522783 /* CalendarWidget.swift */; };
-		824B7C62271609D100522783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 824B7C61271609D100522783 /* Assets.xcassets */; };
-		824B7C64271609D100522783 /* CalendarWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C60271609D000522783 /* CalendarWidget.intentdefinition */; };
-		824B7C65271609D100522783 /* CalendarWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C60271609D000522783 /* CalendarWidget.intentdefinition */; };
-		824B7C68271609D100522783 /* CalendarWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 824B7C57271609D000522783 /* CalendarWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		824B7C6E27160A2900522783 /* CalendarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C6D27160A2900522783 /* CalendarData.swift */; };
 		824B7C70271610BD00522783 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C6F271610BD00522783 /* CalendarView.swift */; };
-		824B7C71271610BD00522783 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C6F271610BD00522783 /* CalendarView.swift */; };
 		82D6E7542712E7A700B1CEBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7532712E7A700B1CEBB /* AppDelegate.swift */; };
 		82D6E7562712E7A700B1CEBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7552712E7A700B1CEBB /* SceneDelegate.swift */; };
 		82D6E75D2712E7A900B1CEBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82D6E75C2712E7A900B1CEBB /* Assets.xcassets */; };
@@ -40,12 +46,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		824B7C66271609D100522783 /* PBXContainerItemProxy */ = {
+		8223519B2719D81400A078B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 82D6E7482712E7A700B1CEBB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 824B7C56271609D000522783;
-			remoteInfo = CalendarWidgetExtension;
+			remoteGlobalIDString = 8223518E2719D81200A078B3;
+			remoteInfo = LeetWidgetsExtension;
 		};
 		82D6E7672712E7A900B1CEBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -70,7 +76,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				824B7C68271609D100522783 /* CalendarWidgetExtension.appex in Embed App Extensions */,
+				8223519D2719D81400A078B3 /* LeetWidgetsExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +84,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		822351772719B57B00A078B3 /* MaterialActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialActivityIndicator.swift; sourceTree = "<group>"; };
+		822351792719B59E00A078B3 /* MaterialActivityIndicatorAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialActivityIndicatorAnimator.swift; sourceTree = "<group>"; };
+		8223517C2719B5D000A078B3 /* CAPropertyAnimation+Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAPropertyAnimation+Key.swift"; sourceTree = "<group>"; };
+		8223517E2719B5E000A078B3 /* CGRect+Center.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Center.swift"; sourceTree = "<group>"; };
+		822351802719B5F500A078B3 /* CGSize+Min.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Min.swift"; sourceTree = "<group>"; };
+		822351822719B60C00A078B3 /* UIBezierPath+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Circle.swift"; sourceTree = "<group>"; };
+		822351852719D52600A078B3 /* LeetStats.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeetStats.entitlements; sourceTree = "<group>"; };
+		8223518F2719D81200A078B3 /* LeetWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LeetWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		822351932719D81200A078B3 /* LeetWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetWidgets.swift; sourceTree = "<group>"; };
+		822351952719D81200A078B3 /* LeetWidgets.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = LeetWidgets.intentdefinition; sourceTree = "<group>"; };
+		822351962719D81400A078B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		822351982719D81400A078B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		822351A22719D8F600A078B3 /* LeetWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeetWidgetsExtension.entitlements; sourceTree = "<group>"; };
 		824B7C40271485F600522783 /* CustomDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDate.swift; sourceTree = "<group>"; };
 		824B7C422715768B00522783 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		824B7C442715B20900522783 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -87,13 +106,8 @@
 		824B7C4A2715B80700522783 /* DonutChartEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonutChartEntry.swift; sourceTree = "<group>"; };
 		824B7C4B2715B80700522783 /* DonutChartSegmentLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonutChartSegmentLayer.swift; sourceTree = "<group>"; };
 		824B7C4C2715B80700522783 /* CALayer + Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer + Utility.swift"; sourceTree = "<group>"; };
-		824B7C57271609D000522783 /* CalendarWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CalendarWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		824B7C59271609D000522783 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		824B7C5B271609D000522783 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		824B7C5E271609D000522783 /* CalendarWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarWidget.swift; sourceTree = "<group>"; };
-		824B7C60271609D000522783 /* CalendarWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = CalendarWidget.intentdefinition; sourceTree = "<group>"; };
-		824B7C61271609D100522783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		824B7C63271609D100522783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		824B7C6D27160A2900522783 /* CalendarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarData.swift; sourceTree = "<group>"; };
 		824B7C6F271610BD00522783 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		82D6E7502712E7A700B1CEBB /* LeetStats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeetStats.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,12 +128,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		824B7C54271609D000522783 /* Frameworks */ = {
+		8223518C2719D81200A078B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				824B7C5C271609D000522783 /* SwiftUI.framework in Frameworks */,
-				824B7C5A271609D000522783 /* WidgetKit.framework in Frameworks */,
+				822351A3271A0BF500A078B3 /* SwiftUI.framework in Frameworks */,
+				822351A6271A0BF700A078B3 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +161,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		822351762719B55E00A078B3 /* Activity Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				822351772719B57B00A078B3 /* MaterialActivityIndicator.swift */,
+				822351792719B59E00A078B3 /* MaterialActivityIndicatorAnimator.swift */,
+				8223517B2719B5C100A078B3 /* Extension */,
+			);
+			path = "Activity Indicator";
+			sourceTree = "<group>";
+		};
+		8223517B2719B5C100A078B3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8223517C2719B5D000A078B3 /* CAPropertyAnimation+Key.swift */,
+				8223517E2719B5E000A078B3 /* CGRect+Center.swift */,
+				822351802719B5F500A078B3 /* CGSize+Min.swift */,
+				822351822719B60C00A078B3 /* UIBezierPath+Circle.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		822351922719D81200A078B3 /* LeetWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				822351932719D81200A078B3 /* LeetWidgets.swift */,
+				822351952719D81200A078B3 /* LeetWidgets.intentdefinition */,
+				822351962719D81400A078B3 /* Assets.xcassets */,
+				822351982719D81400A078B3 /* Info.plist */,
+			);
+			path = LeetWidgets;
+			sourceTree = "<group>";
+		};
 		824B7C462715B7E600522783 /* Donut Chart */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,24 +215,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		824B7C5D271609D000522783 /* CalendarWidget */ = {
-			isa = PBXGroup;
-			children = (
-				824B7C5E271609D000522783 /* CalendarWidget.swift */,
-				824B7C60271609D000522783 /* CalendarWidget.intentdefinition */,
-				824B7C61271609D100522783 /* Assets.xcassets */,
-				824B7C63271609D100522783 /* Info.plist */,
-			);
-			path = CalendarWidget;
-			sourceTree = "<group>";
-		};
 		82D6E7472712E7A700B1CEBB = {
 			isa = PBXGroup;
 			children = (
+				822351A22719D8F600A078B3 /* LeetWidgetsExtension.entitlements */,
 				82D6E7522712E7A700B1CEBB /* LeetStats */,
 				82D6E7692712E7A900B1CEBB /* LeetStatsTests */,
 				82D6E7732712E7A900B1CEBB /* LeetStatsUITests */,
-				824B7C5D271609D000522783 /* CalendarWidget */,
+				822351922719D81200A078B3 /* LeetWidgets */,
 				824B7C58271609D000522783 /* Frameworks */,
 				82D6E7512712E7A700B1CEBB /* Products */,
 			);
@@ -198,7 +234,7 @@
 				82D6E7502712E7A700B1CEBB /* LeetStats.app */,
 				82D6E7662712E7A900B1CEBB /* LeetStatsTests.xctest */,
 				82D6E7702712E7A900B1CEBB /* LeetStatsUITests.xctest */,
-				824B7C57271609D000522783 /* CalendarWidgetExtension.appex */,
+				8223518F2719D81200A078B3 /* LeetWidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,6 +242,7 @@
 		82D6E7522712E7A700B1CEBB /* LeetStats */ = {
 			isa = PBXGroup;
 			children = (
+				822351852719D52600A078B3 /* LeetStats.entitlements */,
 				824B7C40271485F600522783 /* CustomDate.swift */,
 				82D6E7532712E7A700B1CEBB /* AppDelegate.swift */,
 				82D6E7552712E7A700B1CEBB /* SceneDelegate.swift */,
@@ -213,6 +250,7 @@
 				82D6E7872712F33400B1CEBB /* View */,
 				82D6E78B2712F38000B1CEBB /* Controller */,
 				824B7C462715B7E600522783 /* Donut Chart */,
+				822351762719B55E00A078B3 /* Activity Indicator */,
 				82D6E75C2712E7A900B1CEBB /* Assets.xcassets */,
 				82D6E75E2712E7A900B1CEBB /* LaunchScreen.storyboard */,
 				82D6E7612712E7A900B1CEBB /* Info.plist */,
@@ -269,21 +307,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		824B7C56271609D000522783 /* CalendarWidgetExtension */ = {
+		8223518E2719D81200A078B3 /* LeetWidgetsExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 824B7C69271609D100522783 /* Build configuration list for PBXNativeTarget "CalendarWidgetExtension" */;
+			buildConfigurationList = 8223519E2719D81400A078B3 /* Build configuration list for PBXNativeTarget "LeetWidgetsExtension" */;
 			buildPhases = (
-				824B7C53271609D000522783 /* Sources */,
-				824B7C54271609D000522783 /* Frameworks */,
-				824B7C55271609D000522783 /* Resources */,
+				8223518B2719D81200A078B3 /* Sources */,
+				8223518C2719D81200A078B3 /* Frameworks */,
+				8223518D2719D81200A078B3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CalendarWidgetExtension;
-			productName = CalendarWidgetExtension;
-			productReference = 824B7C57271609D000522783 /* CalendarWidgetExtension.appex */;
+			name = LeetWidgetsExtension;
+			productName = LeetWidgetsExtension;
+			productReference = 8223518F2719D81200A078B3 /* LeetWidgetsExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		82D6E74F2712E7A700B1CEBB /* LeetStats */ = {
@@ -298,7 +336,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				824B7C67271609D100522783 /* PBXTargetDependency */,
+				8223519C2719D81400A078B3 /* PBXTargetDependency */,
 			);
 			name = LeetStats;
 			productName = LeetStats;
@@ -351,7 +389,7 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					824B7C56271609D000522783 = {
+					8223518E2719D81200A078B3 = {
 						CreatedOnToolsVersion = 13.0;
 					};
 					82D6E74F2712E7A700B1CEBB = {
@@ -383,17 +421,17 @@
 				82D6E74F2712E7A700B1CEBB /* LeetStats */,
 				82D6E7652712E7A900B1CEBB /* LeetStatsTests */,
 				82D6E76F2712E7A900B1CEBB /* LeetStatsUITests */,
-				824B7C56271609D000522783 /* CalendarWidgetExtension */,
+				8223518E2719D81200A078B3 /* LeetWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		824B7C55271609D000522783 /* Resources */ = {
+		8223518D2719D81200A078B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				824B7C62271609D100522783 /* Assets.xcassets in Resources */,
+				822351972719D81400A078B3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,13 +462,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		824B7C53271609D000522783 /* Sources */ = {
+		8223518B2719D81200A078B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				824B7C64271609D100522783 /* CalendarWidget.intentdefinition in Sources */,
-				824B7C5F271609D000522783 /* CalendarWidget.swift in Sources */,
-				824B7C71271610BD00522783 /* CalendarView.swift in Sources */,
+				822351A12719D8ED00A078B3 /* Stats.swift in Sources */,
+				822351992719D81400A078B3 /* LeetWidgets.intentdefinition in Sources */,
+				822351942719D81200A078B3 /* LeetWidgets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,21 +477,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				824B7C41271485F600522783 /* CustomDate.swift in Sources */,
+				8223517D2719B5D000A078B3 /* CAPropertyAnimation+Key.swift in Sources */,
 				82D6E78D2712F39400B1CEBB /* ProfileViewController.swift in Sources */,
 				824B7C4F2715B80700522783 /* DonutChartView.swift in Sources */,
 				824B7C70271610BD00522783 /* CalendarView.swift in Sources */,
 				824B7C522715B80700522783 /* CALayer + Utility.swift in Sources */,
 				824B7C512715B80700522783 /* DonutChartSegmentLayer.swift in Sources */,
+				8223517A2719B59E00A078B3 /* MaterialActivityIndicatorAnimator.swift in Sources */,
 				824B7C6E27160A2900522783 /* CalendarData.swift in Sources */,
-				824B7C65271609D100522783 /* CalendarWidget.intentdefinition in Sources */,
 				82D6E7842712E7B700B1CEBB /* NetworkManager.swift in Sources */,
+				822351782719B57B00A078B3 /* MaterialActivityIndicator.swift in Sources */,
 				82D6E7862712E7C700B1CEBB /* Stats.swift in Sources */,
 				82D6E78A2712F37D00B1CEBB /* AuthViewController.swift in Sources */,
 				82D6E7542712E7A700B1CEBB /* AppDelegate.swift in Sources */,
+				822351812719B5F500A078B3 /* CGSize+Min.swift in Sources */,
 				824B7C4D2715B80700522783 /* CGFloat+Radian.swift in Sources */,
+				822351832719B60C00A078B3 /* UIBezierPath+Circle.swift in Sources */,
 				824B7C502715B80700522783 /* DonutChartEntry.swift in Sources */,
 				824B7C4E2715B80700522783 /* DonutChartLayer.swift in Sources */,
+				8223517F2719B5E000A078B3 /* CGRect+Center.swift in Sources */,
 				82D6E7562712E7A700B1CEBB /* SceneDelegate.swift in Sources */,
+				8223519A2719D81400A078B3 /* LeetWidgets.intentdefinition in Sources */,
 				824B7C432715768B00522783 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,10 +522,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		824B7C67271609D100522783 /* PBXTargetDependency */ = {
+		8223519C2719D81400A078B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 824B7C56271609D000522783 /* CalendarWidgetExtension */;
-			targetProxy = 824B7C66271609D100522783 /* PBXContainerItemProxy */;
+			target = 8223518E2719D81200A078B3 /* LeetWidgetsExtension */;
+			targetProxy = 8223519B2719D81400A078B3 /* PBXContainerItemProxy */;
 		};
 		82D6E7682712E7A900B1CEBB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -507,57 +551,61 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		824B7C6A271609D100522783 /* Debug */ = {
+		8223519F2719D81400A078B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LeetWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3868R87QJX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CalendarWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = CalendarWidget;
+				INFOPLIST_FILE = LeetWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LeetWidgets;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.romanrakhlin.LeetStats.CalendarWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.romanrakhlin.LeetStats.LeetWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		824B7C6B271609D100522783 /* Release */ = {
+		822351A02719D81400A078B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LeetWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3868R87QJX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CalendarWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = CalendarWidget;
+				INFOPLIST_FILE = LeetWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LeetWidgets;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.romanrakhlin.LeetStats.CalendarWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.romanrakhlin.LeetStats.LeetWidgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -612,7 +660,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -667,7 +715,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -683,6 +731,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LeetStats/LeetStats.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3868R87QJX;
@@ -694,7 +743,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -714,6 +763,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LeetStats/LeetStats.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3868R87QJX;
@@ -725,7 +775,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -838,11 +888,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		824B7C69271609D100522783 /* Build configuration list for PBXNativeTarget "CalendarWidgetExtension" */ = {
+		8223519E2719D81400A078B3 /* Build configuration list for PBXNativeTarget "LeetWidgetsExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				824B7C6A271609D100522783 /* Debug */,
-				824B7C6B271609D100522783 /* Release */,
+				8223519F2719D81400A078B3 /* Debug */,
+				822351A02719D81400A078B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

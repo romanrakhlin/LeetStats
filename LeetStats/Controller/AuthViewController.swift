@@ -11,7 +11,6 @@ class AuthViewController: UIViewController {
     
     let networkManager = NetworkManager()
     var stats: Stats?
-    let defaults = UserDefaults.standard // for UserDefaults
 
     @IBOutlet weak var usernameTextField: UITextField!
     
@@ -32,10 +31,11 @@ class AuthViewController: UIViewController {
                             // save stats to UserDefaults
                             let encoder = JSONEncoder()
                             if let encoded = try? encoder.encode(self.stats) {
-                                self.defaults.set(encoded, forKey: "SavedStats")
-                                self.defaults.synchronize()
+                                if let userDefaults = UserDefaults(suiteName: "group.com.romanrakhlin.LeetStats") {
+                                    userDefaults.setValue(encoded, forKey: "SavedStats")
+                                    userDefaults.synchronize()
+                                }
                             }
-                            
                             // go to the ProfileViewCOntroller
                             DispatchQueue.main.async {
                                 self.performSegue(withIdentifier: "profileSegue", sender: self)

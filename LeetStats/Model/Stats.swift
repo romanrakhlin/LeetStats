@@ -12,6 +12,7 @@ import Foundation
 
 struct Stats: Codable {
     var username: String? // its not in API but I gonna add it mannually aftet I get data
+    var streak: Int? // for widget
     var ranking: Int
     var totalMedium: Int
     var totalQuestions: Int
