@@ -16,6 +16,11 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        usernameTextField.delegate = self
+        
+        // for hidin keyboard by touching anywhere
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func authButtonPressed(_ sender: UIButton) {
@@ -71,5 +76,24 @@ class AuthViewController: UIViewController {
                 destinationVC.calendarSubmissions = stats!.submissionCalendar
             }
         }
+    }
+}
+
+
+// MARK: - for hidin keyboard by touching anywhere and on return key
+extension UIViewController: UITextFieldDelegate {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // dismiss keyboard
+        return true
     }
 }

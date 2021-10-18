@@ -167,6 +167,7 @@ class ProfileViewController: UIViewController {
         easyView.layer.cornerRadius = easyView.frame.size.height / 5
         mediumView.layer.cornerRadius = mediumView.frame.size.height / 5
         hardView.layer.cornerRadius = hardView.frame.size.height / 5
+        calendarView.layer.cornerRadius = calendarView.frame.size.height / 5
         
         // shadows views
         totalView.layer.shadowColor = UIColor.black.cgColor
@@ -243,9 +244,11 @@ class ProfileViewController: UIViewController {
         return submissions
     }
     
+    // TODO: - make more complex logic like if today is 0 and check if yesyerday wasnt zero then do smth and if yesterday was zero then today set to zero. Its because right now if someone solve some problems today streak will append only tomorrow. Another problem is that if some weird nerd have streak more than 84 days straight then on 85th day it will still 84 and 84 will be permanent. and it need to be solved!
     // func for adding streak property to Stats
     private func getStreakNum(array: [Int]) -> Int {
-        let reversedArray = array.reversed()
+        let preparedArray = array
+        let reversedArray = preparedArray.reversed()
         var count = 0
         for i in reversedArray {
             if i == 0 {
