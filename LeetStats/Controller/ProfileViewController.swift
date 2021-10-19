@@ -109,7 +109,7 @@ class ProfileViewController: UIViewController {
                             // load donut chart view
                             let values : [CGFloat] = [self.stats.acceptanceRate / 100, 1 - self.stats.acceptanceRate / 100]
                             print(values)
-                            let colors: [UIColor] = [.systemGreen, .white]
+                            let colors: [UIColor] = [.systemGreen, UIColor(named: "AcceptanceColor")!]
                             let entries = values.enumerated().map{ (index, value) in
                                 return DonutChartEntry(value: value, color: colors[index])
                             }

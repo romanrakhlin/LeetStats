@@ -28,8 +28,17 @@ class CalendarView: UIView {
     
     //common func to init our view
     private func setupView() {
+        // round view
+        self.layer.cornerRadius = self.frame.size.height / 5
+        
+        // shadows views
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.4
+        self.layer.shadowOffset = .zero
+        self.layer.shadowRadius = 8
+        
         // MARK: - work with main view style
-        self.backgroundColor = .white // color
+        self.backgroundColor = UIColor(named: "CalendarColor") // color
         self.layer.cornerRadius = self.frame.size.height / 12 // round
         
         // little bit of shadows
@@ -55,15 +64,14 @@ class CalendarView: UIView {
                 let cellView = UIView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
                 
                 // here we setting color depends on value of submissions
-                var cellColor: UIColor = .white
+                var cellColor: UIColor!
                 let levelsOfColors: [String: UIColor] = [
-                    "none": UIColor.white,
+                    "none": UIColor(named: "CalendarItemColor")!,
                     "begginer": UIColor(r: 178, g: 223, b: 71),
                     "intermediate": UIColor(r: 94, g: 199, b: 33),
                     "advanced": UIColor(r: 45, g: 100, b: 13)
                 ]
                 
-//                print(submissions[indexInSubmission])
                 switch submissions[indexInSubmission] {
                 case 1...5:
                     cellColor = levelsOfColors["begginer"]!
