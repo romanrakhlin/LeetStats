@@ -27,6 +27,10 @@ class AuthViewController: UIViewController {
         // getting data from API
         if let username = usernameTextField.text {
             if username != "" {
+                guard !(username.hasWhiteSpace) else {
+                    showErrorAlert(with: "Username can't contain spaces!")
+                    return
+                }
                 networkManager.performRequest(with: username, completed: { newStats in
                     self.stats = newStats // save all stats
                     self.stats!.username = username // save username independently
@@ -47,15 +51,19 @@ class AuthViewController: UIViewController {
                             }
                         case "error":
                             self.showErrorAlert(with: "Wrong username")
+                            return
                         default:
                             self.showErrorAlert(with: "Something Went Wrong")
+                            return
                         }
                     } else {
                         self.showErrorAlert(with: "Invalid Input")
+                        return
                     }
                 })
             } else {
                 showErrorAlert(with: "Enter your username")
+                return
             }
         }
     }
@@ -95,5 +103,12 @@ extension UIViewController: UITextFieldDelegate {
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // dismiss keyboard
         return true
+    }
+}
+
+// MARK: - Extension For Checking that if String Has Spaces
+extension String {
+    public var hasWhiteSpace: Bool {
+        return self.contains(" ")
     }
 }
