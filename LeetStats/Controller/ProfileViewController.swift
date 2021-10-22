@@ -260,37 +260,61 @@ class ProfileViewController: UIViewController {
         
         // millisends from 1st jan 1970 year
         var calendar = Calendar.current
-        calendar.timeZone = TimeZone(secondsFromGMT:0)!
+        calendar.timeZone = TimeZone(secondsFromGMT: 0)!
         let todayInSecondsFrom1970 = calendar.startOfDay(for: currentDate).timeIntervalSince1970
         
         let day = 24 * 3600
         
         for (key, value) in calendarSubmissions {
-            let index = (submissions.count - (Int(todayInSecondsFrom1970) - Int(key)!) / day) - 1
-            if index >= 0 {
+            let index = (submissions.count - (Int(todayInSecondsFrom1970) - Int(key)!) / day) - 2
+            if index >= 0 && index < 84 {
                 submissions[index] = value
             }
         }
         
         self.stats!.streak = getStreakNum(array: submissions)
-        
+        print(submissions)
         return submissions
     }
     
-    // TODO: - make more complex logic like if today is 0 and check if yesyerday wasnt zero then do smth and if yesterday was zero then today set to zero. Its because right now if someone solve some problems today streak will append only tomorrow. Another problem is that if some weird nerd have streak more than 84 days straight then on 85th day it will still 84 and 84 will be permanent. and it need to be solved!
     // func for adding streak property to Stats
     private func getStreakNum(array: [Int]) -> Int {
-        let preparedArray = array
-        let reversedArray = preparedArray.reversed()
-        var count = 0
-        for i in reversedArray {
-            if i == 0 {
-                break
+        var indexIterateFrom = array.count - 1
+    
+        // if last element is zero
+        if array[array.count - 1] == 0 {
+            // here is to possibilities
+            // first - prelast is 0
+            // second - prelast >0
+            if array[array.count - 2] == 0 {
+                return 0
             } else {
-                count += 1
+                indexIterateFrom = array.count - 2
             }
         }
+        
+        var count = 0
+        
+        while array[indexIterateFrom] != 0 {
+            count += 1
+            indexIterateFrom -= 1
+        }
+        
         return count
+        
+//        let preparedArray = array
+//        let reversedArray = preparedArray.reversed()
+//
+//        var count = 0
+//
+//        for i in reversedArray {
+//            if i == 0 {
+//                break
+//            } else {
+//                count += 1
+//            }
+//        }
+//        return count
     }
 }
 
