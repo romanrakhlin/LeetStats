@@ -21,6 +21,8 @@
 		822351A12719D8ED00A078B3 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D6E7852712E7C700B1CEBB /* Stats.swift */; };
 		822351A3271A0BF500A078B3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824B7C5B271609D000522783 /* SwiftUI.framework */; };
 		822351A6271A0BF700A078B3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824B7C59271609D000522783 /* WidgetKit.framework */; };
+		822E94B92722FDC600B0F781 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 822E94B82722FDC600B0F781 /* Reachability */; };
+		822E94BB2722FDE200B0F781 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822E94BA2722FDE200B0F781 /* ConnectionManager.swift */; };
 		824B7C41271485F600522783 /* CustomDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C40271485F600522783 /* CustomDate.swift */; };
 		824B7C432715768B00522783 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824B7C422715768B00522783 /* SettingsViewController.swift */; };
 		824B7C452715B20900522783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824B7C442715B20900522783 /* Main.storyboard */; };
@@ -97,6 +99,7 @@
 		822351962719D81400A078B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		822351982719D81400A078B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		822351A22719D8F600A078B3 /* LeetWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeetWidgetsExtension.entitlements; sourceTree = "<group>"; };
+		822E94BA2722FDE200B0F781 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		824B7C40271485F600522783 /* CustomDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDate.swift; sourceTree = "<group>"; };
 		824B7C422715768B00522783 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		824B7C442715B20900522783 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -141,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				822E94B92722FDC600B0F781 /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +258,7 @@
 				82D6E75C2712E7A900B1CEBB /* Assets.xcassets */,
 				82D6E75E2712E7A900B1CEBB /* LaunchScreen.storyboard */,
 				82D6E7612712E7A900B1CEBB /* Info.plist */,
+				822E94BA2722FDE200B0F781 /* ConnectionManager.swift */,
 			);
 			path = LeetStats;
 			sourceTree = "<group>";
@@ -339,6 +344,9 @@
 				8223519C2719D81400A078B3 /* PBXTargetDependency */,
 			);
 			name = LeetStats;
+			packageProductDependencies = (
+				822E94B82722FDC600B0F781 /* Reachability */,
+			);
 			productName = LeetStats;
 			productReference = 82D6E7502712E7A700B1CEBB /* LeetStats.app */;
 			productType = "com.apple.product-type.application";
@@ -414,6 +422,9 @@
 				Base,
 			);
 			mainGroup = 82D6E7472712E7A700B1CEBB;
+			packageReferences = (
+				822E94B72722FDC600B0F781 /* XCRemoteSwiftPackageReference "Reachability" */,
+			);
 			productRefGroup = 82D6E7512712E7A700B1CEBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -489,6 +500,7 @@
 				822351782719B57B00A078B3 /* MaterialActivityIndicator.swift in Sources */,
 				82D6E7862712E7C700B1CEBB /* Stats.swift in Sources */,
 				82D6E78A2712F37D00B1CEBB /* AuthViewController.swift in Sources */,
+				822E94BB2722FDE200B0F781 /* ConnectionManager.swift in Sources */,
 				82D6E7542712E7A700B1CEBB /* AppDelegate.swift in Sources */,
 				822351812719B5F500A078B3 /* CGSize+Min.swift in Sources */,
 				824B7C4D2715B80700522783 /* CGFloat+Radian.swift in Sources */,
@@ -942,6 +954,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		822E94B72722FDC600B0F781 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		822E94B82722FDC600B0F781 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 822E94B72722FDC600B0F781 /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 82D6E7482712E7A700B1CEBB /* Project object */;
 }

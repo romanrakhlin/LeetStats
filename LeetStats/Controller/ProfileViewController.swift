@@ -50,6 +50,7 @@ class ProfileViewController: UIViewController {
         
         // setting up spinner
         setupActivityIndicatorView()
+        self.activityIndicator.startAnimating()
         
         // check if already in userdefaults
         // then set stats var from user defaults and go the profile controller
@@ -57,78 +58,66 @@ class ProfileViewController: UIViewController {
             if let savedStats = userDefaults.object(forKey: "SavedStats") as? Data {
                 let decoder = JSONDecoder()
                 if let loadedStats = try? decoder.decode(Stats.self, from: savedStats) {
+                    
                     // check if username exists
                     guard let username = loadedStats.username else {
                         return
                     }
-                    
-                    DispatchQueue.main.async {
-                        self.activityIndicator.startAnimating()
-                    }
-                    
-                    // making new request to get new data
-                    networkManager.performRequest(with: username, completed: { gotStats in
-                        // if we got nil while getting the data
-                        guard let newStats = gotStats else {
-                            DispatchQueue.main.async {
-                                self.performSegue(withIdentifier: "authSegue", sender: self)
+
+                    // check for interner connection
+                    if ConnectionManager.shared.hasConnectivity() {
+                        // making new request to get new data
+                        networkManager.performRequest(with: username, completed: { gotStats in
+                            // if we got nil while getting the data
+                            guard let newStats = gotStats else {
+                                DispatchQueue.main.async {
+                                    self.performSegue(withIdentifier: "authSegue", sender: self)
+                                }
+                                return
                             }
-                            return
-                        }
-                        
-                        self.stats = newStats // save all stats
+                            
+                            self.stats = newStats // save all stats
+                            self.calendarSubmissions = self.stats!.submissionCalendar
+                            self.stats!.username = username // save username independently
+                            self.submissions = self.setAllSubmission()
+                            self.stats!.streak = self.getStreakNum(array: self.submissions)
+
+                            // save stats to UserDefaults
+                            let encoder = JSONEncoder()
+                            if let encoded = try? encoder.encode(self.stats) {
+                                userDefaults.setValue(encoded, forKey: "SavedStats")
+                                userDefaults.synchronize()
+                            }
+                            
+                            // settiin u pthe UI
+                            DispatchQueue.main.async {
+                                self.prepareComponentsOnView()
+                                
+                                // show all elements
+                                self.switchAppearenceOfComponents(to: false)
+                                
+                                // stop the activity indicator
+                                self.activityIndicator.stopAnimating()
+                            }
+                        })
+                    } else {
+                        self.stats = loadedStats
                         self.calendarSubmissions = self.stats!.submissionCalendar
                         self.stats!.username = username // save username independently
                         self.submissions = self.setAllSubmission()
-                        self.stats!.streak = self.getStreakNum(array: self.submissions) 
-
-                        // save stats to UserDefaults
-                        let encoder = JSONEncoder()
-                        if let encoded = try? encoder.encode(self.stats) {
-                            userDefaults.setValue(encoded, forKey: "SavedStats")
-                            userDefaults.synchronize()
-                        }
-
-                        // go to the ProfileViewCOntroller
-                        DispatchQueue.main.async {
-                            self.activityIndicator.stopAnimating()
-                            
-                            let calendarMainView = CalendarView(frame: CGRect(x: 0, y: 0, width: self.calendarView.frame.width, height: self.calendarView.frame.height), data: self.submissions)
-                            self.calendarView.addSubview(calendarMainView)
-                            calendarMainView.translatesAutoresizingMaskIntoConstraints = false
-                            NSLayoutConstraint.activate([
-                                calendarMainView.topAnchor.constraint(equalTo: self.calendarView.topAnchor),
-                                calendarMainView.bottomAnchor.constraint(equalTo: self.calendarView.bottomAnchor),
-                                calendarMainView.leadingAnchor.constraint(equalTo: self.calendarView.leadingAnchor),
-                                calendarMainView.trailingAnchor.constraint(equalTo: self.calendarView.trailingAnchor),
-                            ])
-                            
-                            // set values to labels
-                            self.usernameLabel.text = self.stats.username!
-                            self.totalLabel.text = String(self.stats.totalSolved) + " / " + String(self.stats.totalQuestions)
-                            self.easyLabel.text = String(self.stats.easySolved) + " / " + String(self.stats.totalEasy)
-                            self.mediumLabel.text = String(self.stats.mediumSolved) + " / " + String(self.stats.totalMedium)
-                            self.hardLabel.text = String(self.stats.hardSolved) + " / " + String(self.stats.totalHard)
-                            self.rankingLabel.text = "Ranking: \(String(self.stats.ranking))"
-                            self.reputationLabel.text = "Reputation: \(String(self.stats.reputation))"
-                            self.contributionPointsLabel.text = "Contribution Points: \(String(self.stats.contributionPoints))"
-                            self.streakLabel.text = String(self.getStreakNum(array: self.submissions))
-                            
-                            // load donut chart view
-                            let values : [CGFloat] = [self.stats.acceptanceRate / 100, 1 - self.stats.acceptanceRate / 100]
-                            print(values)
-                            let colors: [UIColor] = [.systemGreen, UIColor(named: "AcceptanceColor")!]
-                            let entries = values.enumerated().map{ (index, value) in
-                                return DonutChartEntry(value: value, color: colors[index])
-                            }
-                            self.donutChartView.configureView(entries: entries, centerLabelText: "\(self.stats.acceptanceRate)% / 100%", animate: true)
-                        }
+                        self.stats!.streak = self.getStreakNum(array: self.submissions)
                         
-                        // show all elements
+                        // settiin u pthe UI
                         DispatchQueue.main.async {
+                            self.prepareComponentsOnView()
+                            
+                            // show all elements
                             self.switchAppearenceOfComponents(to: false)
+                            
+                            // stop the activity indicator
+                            self.activityIndicator.stopAnimating()
                         }
-                    })
+                    }
                 }
             } else {
                 DispatchQueue.main.async {
@@ -136,6 +125,41 @@ class ProfileViewController: UIViewController {
                     return
                 }
             }
+        }
+    }
+    
+    // prepapre components on view
+    private func prepareComponentsOnView() {
+        DispatchQueue.main.async {
+            let calendarMainView = CalendarView(frame: CGRect(x: 0, y: 0, width: self.calendarView.frame.width, height: self.calendarView.frame.height), data: self.submissions)
+            self.calendarView.addSubview(calendarMainView)
+            calendarMainView.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                calendarMainView.topAnchor.constraint(equalTo: self.calendarView.topAnchor),
+                calendarMainView.bottomAnchor.constraint(equalTo: self.calendarView.bottomAnchor),
+                calendarMainView.leadingAnchor.constraint(equalTo: self.calendarView.leadingAnchor),
+                calendarMainView.trailingAnchor.constraint(equalTo: self.calendarView.trailingAnchor),
+            ])
+            
+            // set values to labels
+            self.usernameLabel.text = self.stats.username!
+            self.totalLabel.text = String(self.stats.totalSolved) + " / " + String(self.stats.totalQuestions)
+            self.easyLabel.text = String(self.stats.easySolved) + " / " + String(self.stats.totalEasy)
+            self.mediumLabel.text = String(self.stats.mediumSolved) + " / " + String(self.stats.totalMedium)
+            self.hardLabel.text = String(self.stats.hardSolved) + " / " + String(self.stats.totalHard)
+            self.rankingLabel.text = "Ranking: \(String(self.stats.ranking))"
+            self.reputationLabel.text = "Reputation: \(String(self.stats.reputation))"
+            self.contributionPointsLabel.text = "Contribution Points: \(String(self.stats.contributionPoints))"
+            self.streakLabel.text = String(self.getStreakNum(array: self.submissions))
+            
+            // load donut chart view
+            let values : [CGFloat] = [self.stats.acceptanceRate / 100, 1 - self.stats.acceptanceRate / 100]
+            print(values)
+            let colors: [UIColor] = [.systemGreen, UIColor(named: "AcceptanceColor")!]
+            let entries = values.enumerated().map{ (index, value) in
+                return DonutChartEntry(value: value, color: colors[index])
+            }
+            self.donutChartView.configureView(entries: entries, centerLabelText: "\(self.stats.acceptanceRate)% / 100%", animate: true)
         }
     }
     
