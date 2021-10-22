@@ -6,6 +6,8 @@
 
 App that works with LeetCode.com and shows Statistics in there.
 
+If you wana test my app - https://testflight.apple.com/join/fOz1zItv
+
 ## Screenshots
 
 ![image](./image.png)
