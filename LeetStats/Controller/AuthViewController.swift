@@ -31,7 +31,13 @@ class AuthViewController: UIViewController {
                     showErrorAlert(with: "Username can't contain spaces!")
                     return
                 }
-                networkManager.performRequest(with: username, completed: { newStats in
+                networkManager.performRequest(with: username, completed: { gotStats in
+                    // if we got nil while getting the data
+                    guard let newStats = gotStats else {
+                        self.showErrorAlert(with: "Something Went Wrong")
+                        return
+                    }
+                    
                     self.stats = newStats // save all stats
                     self.stats!.username = username // save username independently
                     if let safeStats = self.stats {

@@ -67,7 +67,15 @@ class ProfileViewController: UIViewController {
                     }
                     
                     // making new request to get new data
-                    networkManager.performRequest(with: username, completed: { newStats in
+                    networkManager.performRequest(with: username, completed: { gotStats in
+                        // if we got nil while getting the data
+                        guard let newStats = gotStats else {
+                            DispatchQueue.main.async {
+                                self.performSegue(withIdentifier: "authSegue", sender: self)
+                            }
+                            return
+                        }
+                        
                         self.stats = newStats // save all stats
                         self.calendarSubmissions = self.stats!.submissionCalendar
                         self.stats!.username = username // save username independently
@@ -125,6 +133,7 @@ class ProfileViewController: UIViewController {
             } else {
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "authSegue", sender: self)
+                    return
                 }
             }
         }
