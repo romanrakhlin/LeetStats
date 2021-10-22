@@ -8,6 +8,12 @@ App that works with LeetCode.com and shows Statistics in there.
 
 If you wana test my app - https://testflight.apple.com/join/fOz1zItv
 
+## Thanks to
+
+Thanks a lot to this guy and his api - https://github.com/JeremyTsaii/leetcode-stats-api
+
+Without it I would never created this app!
+
 ## Screenshots
 
 ![image](./image.png)
