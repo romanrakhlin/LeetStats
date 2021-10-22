@@ -12,5 +12,11 @@ If you wana test my app - https://testflight.apple.com/join/fOz1zItv
 
 ![image](./image.png)
 
+## Thanks to
+
+Thanks a lot to this guy and his api - https://github.com/JeremyTsaii/leetcode-stats-api
+
+Without it I would never created this app!
+
 ## License
 LeetStats is available under the MIT license. See the LICENSE file for more info.
