@@ -5,6 +5,7 @@
 [![License](https://img.shields.io/github/license/romarakhlin/CoronaMap)](https://github.com/romarakhlin/CoronaMap/blob/master/LICENSE)
 
 App that works with LeetCode.com and shows Statistics in there.
+
 If you wana test my app - https://testflight.apple.com/join/fOz1zItv
 
 ## Screenshots
