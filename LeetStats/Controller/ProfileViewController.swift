@@ -266,7 +266,7 @@ class ProfileViewController: UIViewController {
         let day = 24 * 3600
         
         for (key, value) in calendarSubmissions {
-            let index = (submissions.count - (Int(todayInSecondsFrom1970) - Int(key)!) / day) - 2
+            let index = (submissions.count - (Int(todayInSecondsFrom1970) - Int(key)!) / day) - 1
             if index >= 0 && index < 84 {
                 submissions[index] = value
             }
