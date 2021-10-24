@@ -1,10 +1,18 @@
-# LeetStats
+# <p align="center">LeetStats</p>
 
 ![iOS](https://img.shields.io/badge/iOS-15%20-blue)
 ![Swift](https://img.shields.io/badge/Swift-5-orange?logo=Swift&logoColor=white)
 [![License](https://img.shields.io/github/license/romarakhlin/CoronaMap)](https://github.com/romarakhlin/CoronaMap/blob/master/LICENSE)
 
 App that works with LeetCode.com and shows Statistics in there.
+
+<hr />
+
+<p align="center">
+<img src="./image.png" width="900" />
+</p>
+
+<hr />
 
 TO DOWNLOAD - https://apps.apple.com/us/app/leetstats-leetcode-analytics/id1590820002
 
