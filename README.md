@@ -15,6 +15,7 @@ If you wana test my app - https://testflight.apple.com/join/fOz1zItv
 Thanks a lot to this guy and his api - https://github.com/JeremyTsaii/leetcode-stats-api
 
 Without it I would never created this app!
+<a href="https://www.producthunt.com/posts/leetstats-leetcode-analytics?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-leetstats-leetcode-analytics" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=317073&theme=light" alt="LeetStats - LeetCode Analytics - LeetCode Analytics Interview Coding Problems | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 ## Screenshots
 
