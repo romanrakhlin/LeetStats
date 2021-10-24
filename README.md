@@ -2,7 +2,7 @@
 
 ![iOS](https://img.shields.io/badge/iOS-15%20-blue)
 ![Swift](https://img.shields.io/badge/Swift-5-orange?logo=Swift&logoColor=white)
-[![License](https://img.shields.io/github/license/romarakhlin/CoronaMap)](https://github.com/romarakhlin/CoronaMap/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/romarakhlin/LeetStats)](https://github.com/romarakhlin/LeetStats/blob/master/LICENSE)
 
 App that works with LeetCode.com and shows Statistics in there.
 
