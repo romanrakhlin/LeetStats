@@ -6,6 +6,8 @@
 
 App that works with LeetCode.com and shows Statistics in there.
 
+TO DOWNLOAD - https://apps.apple.com/us/app/leetstats-leetcode-analytics/id1590820002
+
 If you wana test my app - https://testflight.apple.com/join/fOz1zItv
 
 ## Thanks to
