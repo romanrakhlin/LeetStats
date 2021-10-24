@@ -12,15 +12,16 @@ App that works with LeetCode.com and shows Statistics in there.
 
 <a href="https://www.producthunt.com/posts/leetstats-leetcode-analytics?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-leetstats-leetcode-analytics" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=317073&theme=light" alt="LeetStats - LeetCode Analytics - LeetCode Analytics Interview Coding Problems | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
+## Screenshots
+
+<img src="./image.png" width="800" />
+
 ## Thanks to
 
 Thanks a lot to this guy and his api - https://github.com/JeremyTsaii/leetcode-stats-api
 
 Without it I would never created this app!
 
-## Screenshots
-
-<img src="./image.png" width="800" />
-
 ## License
+
 LeetStats is available under the MIT license. See the LICENSE file for more info.
