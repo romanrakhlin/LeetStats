@@ -1,10 +1,10 @@
 # <p align="center">LeetStats</p>
 
-<p align="center">
+<div align="center">
 ![iOS](https://img.shields.io/badge/iOS-15%20-blue)
 ![Swift](https://img.shields.io/badge/Swift-5-orange?logo=Swift&logoColor=white)
 [![License](https://img.shields.io/github/license/romarakhlin/CoronaMap)](https://github.com/romarakhlin/CoronaMap/blob/master/LICENSE)
-</p>
+</div>
 
 
 <p align="center">App that works with LeetCode.com and shows Statistics in there.</p>
