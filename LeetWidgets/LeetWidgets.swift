@@ -45,6 +45,7 @@ private struct StreakWidgetEntryView: View {
                     .frame(height: 60)
                 Text("\(streakNumber)")
                     .font(.system(size: 55, weight: .bold, design: .default))
+                    .minimumScaleFactor(0.4)
             }
         }
     }
