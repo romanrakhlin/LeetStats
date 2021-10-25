@@ -23,6 +23,13 @@ class AuthViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        // set viewcontroller's orientation to only PORTRAIT
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
+    }
+    
     @IBAction func authButtonPressed(_ sender: UIButton) {
         // getting data from API
         if let username = usernameTextField.text {

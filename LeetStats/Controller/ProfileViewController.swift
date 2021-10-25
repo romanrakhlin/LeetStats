@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController {    
     
     var stats: Stats!
     var submissions: [Int]!
@@ -196,6 +196,9 @@ class ProfileViewController: UIViewController {
      
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        // set viewcontroller's orientation to only PORTRAIT
+        AppDelegate.AppUtility.lockOrientation(UIInterfaceOrientationMask.portrait, andRotateTo: UIInterfaceOrientation.portrait)
         
         // round
         totalView.layer.cornerRadius = totalView.frame.size.height / 5
