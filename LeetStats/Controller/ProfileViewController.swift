@@ -79,8 +79,9 @@ class ProfileViewController: UIViewController {
                             self.stats = newStats // save all stats
                             self.calendarSubmissions = self.stats!.submissionCalendar
                             self.stats!.username = username // save username independently
-                            self.submissions = self.setAllSubmission()
-                            self.stats!.streak = self.getStreakNum(array: self.submissions)
+                            let allYearSubmissions = self.setAllSubmission()
+                            self.submissions = allYearSubmissions
+                            self.stats!.streak = self.getStreakNum(array: allYearSubmissions)
 
                             // save stats to UserDefaults
                             let encoder = JSONEncoder()
@@ -101,11 +102,12 @@ class ProfileViewController: UIViewController {
                             }
                         })
                     } else {
-                        self.stats = loadedStats
+                        self.stats = loadedStats // save all stats
                         self.calendarSubmissions = self.stats!.submissionCalendar
                         self.stats!.username = username // save username independently
-                        self.submissions = self.setAllSubmission()
-                        self.stats!.streak = self.getStreakNum(array: self.submissions)
+                        let allYearSubmissions = self.setAllSubmission() // all submissions during the day
+                        self.submissions = allYearSubmissions
+                        self.stats!.streak = self.getStreakNum(array: allYearSubmissions)
                         
                         // settiin u pthe UI
                         DispatchQueue.main.async {
@@ -131,7 +133,7 @@ class ProfileViewController: UIViewController {
     // prepapre components on view
     private func prepareComponentsOnView() {
         DispatchQueue.main.async {
-            let calendarMainView = CalendarView(frame: CGRect(x: 0, y: 0, width: self.calendarView.frame.width, height: self.calendarView.frame.height), data: self.submissions)
+            let calendarMainView = CalendarView(frame: CGRect(x: 0, y: 0, width: self.calendarView.frame.width, height: self.calendarView.frame.height), data: self.submissions.suffix(84))
             self.calendarView.addSubview(calendarMainView)
             calendarMainView.translatesAutoresizingMaskIntoConstraints = false
             NSLayoutConstraint.activate([
@@ -244,19 +246,21 @@ class ProfileViewController: UIViewController {
         }
     }
     
-    @IBAction func settingsButtonPressed(_ sender: UIBarButtonItem) {
-    }
-    
     /*
      1. Find seconds passed from 1970 year and store it in todayInSecondsFrom1970
      2.
     */
     private func setAllSubmission() -> [Int] {
         // equal to 12*7=84 elemts by default
-        var submissions = [Int](repeating: 0, count: 84)
         
         // creating curretn date
         let currentDate = Date()
+        
+        // defining numbert of days in year
+        let numberOfDaysInYear = 365
+        
+        // createing array of 0 * numberOfDaysInYear
+        var submissions = [Int](repeating: 0, count: numberOfDaysInYear)
         
         // millisends from 1st jan 1970 year
         var calendar = Calendar.current
@@ -267,7 +271,7 @@ class ProfileViewController: UIViewController {
         
         for (key, value) in calendarSubmissions {
             let index = (submissions.count - (Int(todayInSecondsFrom1970) - Int(key)!) / day) - 1
-            if index >= 0 && index < 84 {
+            if index >= 0 {
                 submissions[index] = value
             }
         }
@@ -298,6 +302,10 @@ class ProfileViewController: UIViewController {
         while array[indexIterateFrom] != 0 {
             count += 1
             indexIterateFrom -= 1
+            print(indexIterateFrom)
+            if indexIterateFrom == -1 {
+                break
+            }
         }
         
         return count
