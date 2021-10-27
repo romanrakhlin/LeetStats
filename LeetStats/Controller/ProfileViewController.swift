@@ -152,7 +152,7 @@ class ProfileViewController: UIViewController {
             self.rankingLabel.text = "Ranking: \(String(self.stats.ranking))"
             self.reputationLabel.text = "Reputation: \(String(self.stats.reputation))"
             self.contributionPointsLabel.text = "Contribution Points: \(String(self.stats.contributionPoints))"
-            self.streakLabel.text = String(self.getStreakNum(array: self.submissions))
+            self.streakLabel.text = String(self.stats.streak!)
             
             // load donut chart view
             let values : [CGFloat] = [self.stats.acceptanceRate / 100, 1 - self.stats.acceptanceRate / 100]
@@ -279,8 +279,6 @@ class ProfileViewController: UIViewController {
             }
         }
         
-        self.stats!.streak = getStreakNum(array: submissions)
-        print(submissions)
         return submissions
     }
     
